@@ -4,7 +4,9 @@
 const inputField = document.getElementById("inputField");
 const addTaskButton = document.getElementById("addTaskBtn");
 const taskList = document.getElementById("taskList");
-taskList.classList.add("taskList")
+taskList.classList.add("taskList");
+
+const deleteAllTasks = document.getElementById("deleleAllBtn");
 
 
 console.log(inputField);
@@ -43,6 +45,11 @@ addTaskButton.addEventListener("click", function () {
 
 
 })
+
+deleteAllTasks.addEventListener("click", function () {
+    taskList.innerHTML = ""
+})
+
 
 
 

@@ -65,3 +65,13 @@ body {
     color: aliceblue;
     background-color: rgb(21, 0, 255);
 }
+
+#deleleAllBtn {
+    margin-top: 23px;
+    background-color: darkcyan;
+    padding: 15px 25px;
+    border-radius: 13px;
+    border-style: none;
+    cursor: pointer;
+
+}
