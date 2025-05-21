@@ -21,10 +21,6 @@ addTaskButton.addEventListener("click", function () {
 
 })
 
-const clearButton = document.getElementById("clear-all-btn").addEventListener("click", function () {
-    taskList.innerHTML = "";
-})
-
 const deleteButton = document.createElement('button');
 
 
