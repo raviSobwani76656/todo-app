@@ -4,24 +4,47 @@
 const inputField = document.getElementById("inputField");
 const addTaskButton = document.getElementById("addTaskBtn");
 const taskList = document.getElementById("taskList");
+taskList.classList.add("taskList")
+
 
 console.log(inputField);
 
 addTaskButton.addEventListener("click", function () {
 
-    const task = inputField.value;
-    if (task === "") {
-        alert("Please enter the task first")
+    const taskText = inputField.value;
+    if (taskText === "") {
+        alert("Please enter the task first");
+        return;
     }
-    else {
 
-        taskList.innerHTML += `<ul>${task}</ul>`;
-        inputField.value = "";
-    }
+    const taskContainer = document.createElement("div");
+
+
+    taskList.insertBefore(taskContainer, taskList.firstChild);
+
+    let task = document.createElement("span")
+    taskContainer.textContent = taskText;
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = "Delete";
+    deleteButton.classList.add("deleteBtn")
+
+    taskContainer.appendChild(deleteButton);
+
+
+    deleteButton.addEventListener("click", function () {
+        taskList.removeChild(taskContainer);
+
+
+    })
+
+    inputField.value = ""
+
+
 
 })
 
-const deleteButton = document.createElement('button');
+
 
 
 
